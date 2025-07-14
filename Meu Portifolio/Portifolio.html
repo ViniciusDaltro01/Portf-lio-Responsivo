@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Vinicius Daltro - Desenvolvedor Web" />
+  <meta name="author" content="Vinicius Daltro" />
+  <title>Vinicius Daltro</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Meu Portifolio/assets/Css/style.css" />
+</head>
+<body id="topo">
+  <button id="tema-toggle" aria-label="Alternar tema claro e escuro">🌙</button>
+
+  <header>
+    <img src="./assets/Imagens/header_vinicius_daltro.png" alt="Cabeçalho Vinicius Daltro" />
+    <h1>Vinicius Daltro - Desenvolvedor Web</h1>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Sou o Vinicius, um entusiasta de tecnologia que curte transformar ideias em código. Gosto de desafios, café e interfaces bem feitas :)</p>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        <li><i class="ri-html5-fill" style="color:#e34f26;"></i> HTML5, CSS3, JavaScript ES6+</li>
+        <li><i class="ri-reactjs-fill" style="color:#61dafb;"></i> React, Node.js, APIs REST</li>
+        <li><i class="ri-brush-fill" style="color:#ff6347;"></i> UI/UX Design, Figma</li>
+        <li><i class="ri-git-branch-fill" style="color:#f05032;"></i> Git & GitHub, Deploy com Vercel</li>
+      </ul>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div>
+        <div class="projeto">
+          <img src="portfolio_thumb.jpg" alt="Portfólio Responsivo" />
+          <p><strong>Portfólio Responsivo:</strong> Meu site pessoal com layout responsivo e dark mode.</p>
+          <a href="https://github.com/ViniciusDaltro01/Portf-lio-Responsivo" target="_blank"><i class="ri-github-fill"></i> Ver Código</a>
+        </div>
+        <div class="projeto">
+          <img src="clima_thumb.jpg" alt="API de Clima" />
+          <p><strong>API de Clima:</strong> Aplicação com dados climáticos em tempo real.</p>
+          <a href="https://github.com/ViniciusDaltro01/weather-app" target="_blank"><i class="ri-github-fill"></i> Ver Código</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form action="https://formspree.io/f/mexample" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/vin%C3%ADcius-daltro-061249356/" target="_blank"><i class="ri-linkedin-box-fill"></i>LinkedIn</a>
+        <a href="https://github.com/ViniciusDaltro01" target="_blank"><i class="ri-github-fill"></i>GitHub</a>
+        <a href="https://wa.me/5571984911538" target="_blank"><i class="ri-whatsapp-fill"></i>WhatsApp</a>
+        <a href="./assets/Imagens/vn.jpg" target="_blank"><i class="ri-instagram-fill"></i>Instagram</a>
+        <a href="./assets/Imagens/tentativa.jpg" target="_blank"><i class="ri-twitter-x-fill"></i>Twitter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com dedicação e alguns litros de café ☕ - Vinicius Daltro</p>
+    <p>2025 - Vinicius Daltro</p>
+    <p>"Transforme seu código em arte e sua arte em impacto."</p>
+  </footer>
+
+  <a href="#topo" class="voltar-topo" aria-label="Voltar ao topo">↑</a>
+
+  <script>
+    const toggleBtn = document.getElementById('tema-toggle');
+    const body = document.body;
+    const temaSalvo = localStorage.getItem('tema');
+
+    if (temaSalvo === 'escuro') {
+      body.classList.add('dark');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      const temaAtual = body.classList.contains('dark') ? 'escuro' : 'claro';
+      localStorage.setItem('tema', temaAtual);
+      toggleBtn.textContent = temaAtual === 'escuro' ? '☀️' : '🌙';
+    });
+    
+  </script>
+</body>
+</html>
+

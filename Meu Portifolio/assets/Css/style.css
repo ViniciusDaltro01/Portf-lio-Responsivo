@@ -1,0 +1,216 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --nav-bg: #555;
+  --header-footer-bg: #333;
+  --header-footer-text: #fff;
+  --button-bg: #333;
+  --button-hover-bg: #444;
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --link-color: #fff;
+  --link-hover: #ddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --nav-bg: #222;
+  --header-footer-bg: #000;
+  --header-footer-text: #eee;
+  --button-bg: #444;
+  --button-hover-bg: #666;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+  --link-color: #eee;
+  --link-hover: #bbb;
+}
+
+header, footer {
+  background: var(--header-footer-bg);
+  color: var(--header-footer-text);
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+nav {
+  background: var(--nav-bg);
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+#projetos > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projeto {
+  flex: 1 1 45%;
+  border: 1px solid var(--card-border);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-sizing: border-box;
+  min-width: 280px;
+  transition: transform 0.2s ease;
+}
+
+.projeto:hover {
+  transform: scale(1.02);
+}
+
+.projeto img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.projeto a {
+  color: var(--button-bg);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projeto a:hover {
+  text-decoration: underline;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  background: var(--card-bg);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+form button {
+  padding: 10px 20px;
+  background: var(--button-bg);
+  color: var(--header-footer-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--button-hover-bg);
+}
+
+.social a {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.social a:hover {
+  text-decoration: underline;
+  color: var(--button-bg);
+}
+
+.social i {
+  margin-right: 5px;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+.voltar-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  color: var(--header-footer-text);
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transition: background 0.3s;
+}
+
+.voltar-topo:hover {
+  background: var(--button-hover-bg);
+}
+
+#tema-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  color: var(--header-footer-text);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+#tema-toggle:hover {
+  background: var(--button-hover-bg);
+}
+
+@media (max-width: 600px) {
+  .projeto {
+    flex: 1 1 100%;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  #tema-toggle {
+    top: auto;
+    bottom: 80px;
+    right: 20px;
+  }
+}
