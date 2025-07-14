@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color: #f9f9f9;
   --text-color: #333;
@@ -214,3 +224,6 @@ form button:hover {
     right: 20px;
   }
 }
+/**/
+@media (min-width: 800px) {}
+ @media (min-width: 1300px) {}
